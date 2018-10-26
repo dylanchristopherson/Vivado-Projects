@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Source templates/Source templates/Add_full.v" \
+"../../../../../Source templates/Source templates/Add_half.v" \
+"../../../../../Source templates/Source templates/Add_rca_16.v" \
+"../../../../../Source templates/Source templates/Add_rca_4.v" \
+"../../../../../Source templates/Source templates/Add_rca_16_TestBench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

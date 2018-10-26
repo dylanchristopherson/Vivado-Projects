@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Oct 13 13:40:45 2018
+# Process ID: 15108
+# Current directory: D:/vivado/Projects/lab_2/multibit_ripple_carry_adder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent45400 D:\vivado\Projects\lab_2\multibit_ripple_carry_adder\multibit_ripple_carry_adder.xpr
+# Log file: D:/vivado/Projects/lab_2/multibit_ripple_carry_adder/vivado.log
+# Journal file: D:/vivado/Projects/lab_2/multibit_ripple_carry_adder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivado/Projects/lab_2/multibit_ripple_carry_adder/multibit_ripple_carry_adder.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source Add_rca_16_TestBench.tcl
+close_sim

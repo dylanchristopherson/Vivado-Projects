@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Oct 16 15:17:55 2018
+# Process ID: 29488
+# Current directory: D:/vivado/Projects/lab_2/exam_1_review
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27216 D:\vivado\Projects\lab_2\exam_1_review\exam_1_review.xpr
+# Log file: D:/vivado/Projects/lab_2/exam_1_review/vivado.log
+# Journal file: D:/vivado/Projects/lab_2/exam_1_review\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivado/Projects/lab_2/exam_1_review/exam_1_review.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source Comlogic_Testbench.tcl
+launch_simulation
+source easy_testbench.tcl
+close_sim
+launch_simulation
+source easy_testbench.tcl
+close_sim
+close_sim

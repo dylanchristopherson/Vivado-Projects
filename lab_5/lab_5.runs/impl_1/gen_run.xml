@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1538083630">
+  <File Type="BITSTR-BMM" Name="UpCounter99_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="UpCounter99_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="UpCounter99_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="UpCounter99_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="UpCounter99.tcl"/>
+  <File Type="OPT-TIMING" Name="UpCounter99_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="UpCounter99_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="UpCounter99_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="UpCounter99_reports.tcl"/>
+  <File Type="OPT-DRC" Name="UpCounter99_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="UpCounter99.hwdef"/>
+  <File Type="PWROPT-DCP" Name="UpCounter99_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="UpCounter99_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="UpCounter99_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="UpCounter99_placed.dcp"/>
+  <File Type="PLACE-IO" Name="UpCounter99_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="UpCounter99_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="UpCounter99_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="UpCounter99_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="UpCounter99_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="UpCounter99_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="UpCounter99_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="UpCounter99.bgn"/>
+  <File Type="PLACE-TIMING" Name="UpCounter99_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="UpCounter99_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="UpCounter99.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="UpCounter99_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="UpCounter99_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="UpCounter99_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="UpCounter99.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="UpCounter99_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="UpCounter99_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="UpCounter99_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="UpCounter99_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="UpCounter99_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="UpCounter99_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="UpCounter99.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="UpCounter99_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="UpCounter99.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="UpCounter99_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="UpCounter99_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="UpCounter99.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UpCounter99_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="UpCounter99_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="UpCounter99_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="UpCounter99_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="UpCounter99_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="UpCounter99_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="UpCounter99_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="UpCounter99_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="UpCounter99_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="UpCounter99_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="UpCounter99_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="UpCounter99_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="UpCounter99_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="UpCounter99_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="UpCounter99_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="UpCounter99_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="UpCounter99_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="UpCounter99_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="UpCounter99_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="UpCounter99.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="UpCounter99_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="UpCounter99.rbt"/>
+  <File Type="BITSTR-NKY" Name="UpCounter99.nky"/>
+  <File Type="BG-DRC" Name="UpCounter99.drc"/>
+  <File Type="RDI-RDI" Name="UpCounter99.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/db_fsm.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UpCounter99.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="UpCounter99"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../homework_1/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

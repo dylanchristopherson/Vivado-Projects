@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Oct 16 15:14:42 2018
+# Process ID: 29520
+# Current directory: D:/vivado/Projects/lab_4_knight_rider
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22244 D:\vivado\Projects\lab_4_knight_rider\lab_4_knight_rider.xpr
+# Log file: D:/vivado/Projects/lab_4_knight_rider/vivado.log
+# Journal file: D:/vivado/Projects/lab_4_knight_rider\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivado/Projects/lab_4_knight_rider/lab_4_knight_rider.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 810.660 ; gain = 113.492
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 16 16:23:32 2018...

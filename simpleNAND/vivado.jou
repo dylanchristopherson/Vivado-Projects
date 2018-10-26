@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Oct 13 13:31:04 2018
+# Process ID: 27812
+# Current directory: D:/vivado/Projects/simpleNAND
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6812 D:\vivado\Projects\simpleNAND\simpleNAND.xpr
+# Log file: D:/vivado/Projects/simpleNAND/vivado.log
+# Journal file: D:/vivado/Projects/simpleNAND\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project D:/vivado/Projects/simpleNAND/simpleNAND.xprupdate_compile_order -fileset sources_1
+

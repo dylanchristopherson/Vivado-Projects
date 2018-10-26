@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct  4 15:44:10 2018
+# Process ID: 31616
+# Current directory: D:/vivado/Projects/lab_6/lab_6.runs/impl_1
+# Command line: vivado.exe -log traffic_light_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source traffic_light_top.tcl -notrace
+# Log file: D:/vivado/Projects/lab_6/lab_6.runs/impl_1/traffic_light_top.vdi
+# Journal file: D:/vivado/Projects/lab_6/lab_6.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source traffic_light_top.tcl -notrace
