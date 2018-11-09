@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov  6 16:06:36 2018
+# Process ID: 102024
+# Current directory: D:/vivado/Projects/lab_10/lab_10.runs/impl_1
+# Command line: vivado.exe -log pwm_leds.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pwm_leds.tcl -notrace
+# Log file: D:/vivado/Projects/lab_10/lab_10.runs/impl_1/pwm_leds.vdi
+# Journal file: D:/vivado/Projects/lab_10/lab_10.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source pwm_leds.tcl -notrace
