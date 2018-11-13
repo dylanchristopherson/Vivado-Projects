@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Nov 11 23:41:37 2018
+# Process ID: 39660
+# Current directory: D:/vivado/Projects/Security_System/Security_System.runs/synth_1
+# Command line: vivado.exe -log on_or_off.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source on_or_off.tcl
+# Log file: D:/vivado/Projects/Security_System/Security_System.runs/synth_1/on_or_off.vds
+# Journal file: D:/vivado/Projects/Security_System/Security_System.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source on_or_off.tcl -notrace

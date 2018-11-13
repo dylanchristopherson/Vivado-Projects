@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 13 16:40:31 2018
+# Process ID: 23316
+# Current directory: D:/vivado/Projects/simpleNAND
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent59020 D:\vivado\Projects\simpleNAND\simpleNAND.xpr
+# Log file: D:/vivado/Projects/simpleNAND/vivado.log
+# Journal file: D:/vivado/Projects/simpleNAND\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivado/Projects/simpleNAND/simpleNAND.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 889.266 ; gain = 188.887
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 13 16:41:25 2018...
