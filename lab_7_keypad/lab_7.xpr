@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="D:/vivado/Projects/lab_7/lab_7.xpr">
+<Project Version="7" Minor="38" Path="D:/vivado/Projects/lab_7_keypad/lab_7.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="653e8a567a4844a8aa82c489b3684d12"/>
@@ -88,7 +88,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../lab_6/Basys3_Master.xdc">
+      <File Path="$PPRDIR/Basys3_Master.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

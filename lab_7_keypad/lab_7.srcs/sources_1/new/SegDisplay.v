@@ -3,13 +3,13 @@
 module SegDisplay(
     input [3:0] DispVal,
     output wire [3:0] anode,
-    output reg [6:0] segOut
+    output reg [6:0] segOut,
+    output reg LED
     );
     assign anode = 4'b1110;
     
     //Convert Key Code Into ASCII
-    
-    always @(DispVal)
+        always @(DispVal)
     begin
     case (DispVal)
     
@@ -32,5 +32,17 @@ module SegDisplay(
         default   : segOut = 7'b1010101;   //0
     endcase
     end  
+ 
       
     endmodule
+
+
+//   always @(DispVal)
+//    begin
+//    case (DispVal)
+    
+//        4'b0000   : segOut = 7'b1000000;   //0      Off
+//        4'b1001   : segOut = 7'b0010000;   //9      On
+//        default   : segOut = 7'b0010000;   //Default is On
+//    endcase
+//    end  

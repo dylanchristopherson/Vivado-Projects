@@ -25,7 +25,7 @@ begin
 end
 
 assign compare1 = (cnt1 == divisor)? 1:0;
-assign compare1 = (cnt2 == divisor2)? 1:0;
+assign compare2 = (cnt1 == divisor2)? 1:0;
 assign EN = compare1 | compare2;
 always @(posedge clk or negedge reset_n)
 begin

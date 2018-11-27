@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log on_or_off.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source on_or_off.tcl" );
+         "-log PmodKeypad_SS.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PmodKeypad_SS.tcl" );
 
 
 

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log on_or_off.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source on_or_off.tcl
+EAStep vivado -log PmodKeypad_SS.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PmodKeypad_SS.tcl

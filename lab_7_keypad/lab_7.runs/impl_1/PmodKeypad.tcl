@@ -69,12 +69,12 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/vivado/Projects/lab_7/lab_7.cache/wt [current_project]
-  set_property parent.project_path D:/vivado/Projects/lab_7/lab_7.xpr [current_project]
-  set_property ip_output_repo D:/vivado/Projects/lab_7/lab_7.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/vivado/Projects/lab_7_keypad/lab_7.cache/wt [current_project]
+  set_property parent.project_path D:/vivado/Projects/lab_7_keypad/lab_7.xpr [current_project]
+  set_property ip_output_repo D:/vivado/Projects/lab_7_keypad/lab_7.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/vivado/Projects/lab_7/lab_7.runs/synth_1/PmodKeypad.dcp
-  read_xdc D:/vivado/Projects/lab_6/Basys3_Master.xdc
+  add_files -quiet D:/vivado/Projects/lab_7_keypad/lab_7.runs/synth_1/PmodKeypad.dcp
+  read_xdc D:/vivado/Projects/lab_7_keypad/Basys3_Master.xdc
   link_design -top PmodKeypad -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

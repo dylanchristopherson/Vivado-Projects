@@ -18,7 +18,7 @@ divider_v inst1 (.reset_n(reset_n), .clk(clk), .clk_out(clk_100KHz));
 defparam inst1.divisor = 1000;  //500
 defparam inst1.divisor2 = 500;  //250
 
-always @ (SW)
+always @(SW)
 begin
    // x and z values are NOT treated as don't-care's
 case(SW)

@@ -23,16 +23,16 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/vivado/Projects/lab_7/lab_7.cache/wt [current_project]
-set_property parent.project_path D:/vivado/Projects/lab_7/lab_7.xpr [current_project]
+set_property webtalk.parent_dir D:/vivado/Projects/lab_7_keypad/lab_7.cache/wt [current_project]
+set_property parent.project_path D:/vivado/Projects/lab_7_keypad/lab_7.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/vivado/Projects/lab_7/lab_7.cache/ip [current_project]
+set_property ip_output_repo d:/vivado/Projects/lab_7_keypad/lab_7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/vivado/Projects/lab_7/lab_7.srcs/sources_1/new/Decoder_OSU.v
-  D:/vivado/Projects/lab_7/lab_7.srcs/sources_1/new/SegDisplay.v
-  D:/vivado/Projects/lab_7/lab_7.srcs/sources_1/new/PmodKeypad.v
+  D:/vivado/Projects/lab_7_keypad/lab_7.srcs/sources_1/new/Decoder_OSU.v
+  D:/vivado/Projects/lab_7_keypad/lab_7.srcs/sources_1/new/SegDisplay.v
+  D:/vivado/Projects/lab_7_keypad/lab_7.srcs/sources_1/new/PmodKeypad.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -42,8 +42,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/vivado/Projects/lab_6/Basys3_Master.xdc
-set_property used_in_implementation false [get_files D:/vivado/Projects/lab_6/Basys3_Master.xdc]
+read_xdc D:/vivado/Projects/lab_7_keypad/Basys3_Master.xdc
+set_property used_in_implementation false [get_files D:/vivado/Projects/lab_7_keypad/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

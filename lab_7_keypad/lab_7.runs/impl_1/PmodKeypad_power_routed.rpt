@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Oct 11 15:43:49 2018
+| Date             : Wed Nov 21 12:39:07 2018
 | Host             : C-1062E59EF5CD running 64-bit major release  (build 9200)
 | Command          : report_power -file PmodKeypad_power_routed.rpt -pb PmodKeypad_power_summary_routed.pb -rpx PmodKeypad_power_routed.rpx
 | Design           : PmodKeypad
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.650        |
+| Total On-Chip Power (W)  | 3.775        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.568        |
+| Dynamic (W)              | 3.692        |
 | Device Static (W)        | 0.083        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 66.8         |
-| Junction Temperature (C) | 43.2         |
+| Max Ambient (C)          | 66.1         |
+| Junction Temperature (C) | 43.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.275 |      112 |       --- |             --- |
-|   LUT as Logic |     0.247 |       60 |     20800 |            0.29 |
+| Slice Logic    |     0.265 |      114 |       --- |             --- |
+|   LUT as Logic |     0.237 |       61 |     20800 |            0.29 |
 |   CARRY4       |     0.013 |        5 |      8150 |            0.06 |
-|   Register     |     0.010 |       28 |     41600 |            0.07 |
+|   Register     |     0.010 |       29 |     41600 |            0.07 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.353 |      104 |       --- |             --- |
-| I/O            |     2.939 |       21 |       106 |           19.81 |
+| Signals        |     0.352 |      106 |       --- |             --- |
+| I/O            |     3.074 |       22 |       106 |           20.75 |
 | Static Power   |     0.083 |          |           |                 |
-| Total          |     3.650 |          |           |                 |
+| Total          |     3.775 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.668 |       0.649 |      0.019 |
-| Vccaux    |       1.800 |     0.120 |       0.107 |      0.013 |
-| Vcco33    |       3.300 |     0.827 |       0.826 |      0.001 |
+| Vccint    |       1.000 |     0.657 |       0.637 |      0.019 |
+| Vccaux    |       1.800 |     0.125 |       0.112 |      0.014 |
+| Vcco33    |       3.300 |     0.865 |       0.864 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,9 +138,9 @@ Table of Contents
 +------------+-----------+
 | Name       | Power (W) |
 +------------+-----------+
-| PmodKeypad |     3.568 |
-|   U1       |     0.508 |
-|   U2       |     0.032 |
+| PmodKeypad |     3.692 |
+|   U1       |     0.506 |
+|   U2       |     0.019 |
 +------------+-----------+
 
 
