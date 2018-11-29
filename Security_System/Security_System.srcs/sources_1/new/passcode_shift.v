@@ -26,14 +26,13 @@ module passcode_shift(
     );
     
     wire [3:0] decode_temp;
-    assign decode_temp = DecodeOut;
     
     always @(DecodeOut)
     begin
         passcode[15:12] <= passcode[11:7];
         passcode[11:8] <= passcode[7:4];
         passcode[7:4] <= passcode[3:0];
-        passcode[3:0] <= decode_temp;
+        passcode[3:0] <= DecodeOut;
     end
     
 endmodule

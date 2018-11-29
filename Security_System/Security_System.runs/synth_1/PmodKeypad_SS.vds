@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Nov 24 12:38:48 2018
-# Process ID: 67444
+# Start of session at: Thu Nov 29 17:26:06 2018
+# Process ID: 77992
 # Current directory: D:/vivado/Projects/Security_System/Security_System.runs/synth_1
 # Command line: vivado.exe -log PmodKeypad_SS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PmodKeypad_SS.tcl
 # Log file: D:/vivado/Projects/Security_System/Security_System.runs/synth_1/PmodKeypad_SS.vds
@@ -15,27 +15,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 67568 
-WARNING: [Synth 8-2292] literal value truncated to fit in 16 bits [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/PmodKeypad_SS.v:22]
+INFO: Helper process launched with PID 78360 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 370.316 ; gain = 112.277
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 357.746 ; gain = 99.051
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'PmodKeypad_SS' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/PmodKeypad_SS.v:3]
 INFO: [Synth 8-6157] synthesizing module 'Decoder_OSU_SS' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_SS.v:23]
-INFO: [Synth 8-6157] synthesizing module 'passcode_shift' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/passcode_shift.v:23]
-WARNING: [Synth 8-567] referenced signal 'passcode' should be on the sensitivity list [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/passcode_shift.v:31]
-WARNING: [Synth 8-567] referenced signal 'decode_temp' should be on the sensitivity list [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/passcode_shift.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'passcode_shift' (1#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/passcode_shift.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Decoder_OSU_SS' (2#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_SS.v:23]
+WARNING: [Synth 8-567] referenced signal 'passcode' should be on the sensitivity list [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_SS.v:128]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder_OSU_SS' (1#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_SS.v:23]
 INFO: [Synth 8-6157] synthesizing module 'SegDisplay_SS' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:58]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:70]
 WARNING: [Synth 8-3848] Net passcode in module/entity SegDisplay_SS does not have driver. [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'SegDisplay_SS' (3#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'PmodKeypad_SS' (4#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/PmodKeypad_SS.v:3]
-WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[11]
-WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[10]
-WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[9]
-WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[8]
+INFO: [Synth 8-6155] done synthesizing module 'SegDisplay_SS' (2#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:3]
+WARNING: [Synth 8-689] width (8) of port connection 'LEDS' does not match port width (9) of module 'SegDisplay_SS' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/PmodKeypad_SS.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'PmodKeypad_SS' (3#1) [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/PmodKeypad_SS.v:3]
 WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[7]
 WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[6]
 WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port passcode[5]
@@ -49,7 +42,7 @@ WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port DispVal[2]
 WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port DispVal[1]
 WARNING: [Synth 8-3331] design SegDisplay_SS has unconnected port DispVal[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 402.988 ; gain = 144.949
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 412.414 ; gain = 153.719
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -62,10 +55,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 402.988 ; gain = 144.949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 412.414 ; gain = 153.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 402.988 ; gain = 144.949
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 412.414 ; gain = 153.719
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -81,30 +74,31 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 738.422 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 738.391 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "LEDM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "SEGMENT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "off_or_on" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "DECODE_BCD" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'DECODE_BCD_reg' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:59]
-WARNING: [Synth 8-327] inferring latch for variable 'off_or_on_reg' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:26]
+WARNING: [Synth 8-327] inferring latch for variable 'DECODE_BCD_reg' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:71]
+WARNING: [Synth 8-327] inferring latch for variable 'off_or_on_reg' [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v:38]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -119,6 +113,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               16 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      7 Bit        Muxes := 1     
 	   4 Input      7 Bit        Muxes := 1     
@@ -129,7 +124,8 @@ Detailed RTL Component Info :
 	   9 Input      4 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -142,6 +138,7 @@ Module Decoder_OSU_SS
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 7     
 	   2 Input      4 Bit        Muxes := 7     
@@ -150,7 +147,8 @@ Detailed RTL Component Info :
 	   9 Input      4 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
 Module SegDisplay_SS 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -178,10 +176,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-6014] Unused sequential element U1/DecodeOut_reg was removed.  [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_SS.v:35]
+WARNING: [Synth 8-6014] Unused sequential element U1/DecodeOut_reg was removed.  [D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_SS.v:64]
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design PmodKeypad_SS has port LED driven by constant 1
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[7]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[6]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[5]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[4]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[3]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[2]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[1]
+WARNING: [Synth 8-3331] design PmodKeypad_SS has unconnected port LEDS[0]
 INFO: [Synth 8-3886] merging instance 'U2/bcd_reg[8]' (FDS) to 'U2/bcd_reg[9]'
 INFO: [Synth 8-3886] merging instance 'U2/bcd_reg[12]' (FDS) to 'U2/bcd_reg[13]'
 INFO: [Synth 8-3886] merging instance 'U2/bcd_reg[4]' (FDR) to 'U2/bcd_reg[15]'
@@ -202,7 +208,7 @@ WARNING: [Synth 8-3332] Sequential element (U2/DECODE_BCD_reg[2]) is unused and 
 WARNING: [Synth 8-3332] Sequential element (U2/bcd_reg[13]) is unused and will be removed from module PmodKeypad_SS.
 WARNING: [Synth 8-3332] Sequential element (U2/bcd_reg[2]) is unused and will be removed from module PmodKeypad_SS.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -214,13 +220,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 738.422 ; gain = 480.383
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 738.391 ; gain = 479.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -232,7 +238,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -256,7 +262,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -269,7 +275,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -281,25 +287,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -315,37 +321,39 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
+|1     |BUFG   |     2|
 |2     |CARRY4 |     9|
 |3     |LUT1   |     4|
-|4     |LUT2   |     6|
-|5     |LUT4   |     6|
-|6     |LUT5   |     5|
-|7     |LUT6   |     8|
-|8     |MUXF7  |     1|
+|4     |LUT2   |     3|
+|5     |LUT3   |     1|
+|6     |LUT4   |    11|
+|7     |LUT5   |     3|
+|8     |LUT6   |     8|
 |9     |FDCE   |    20|
 |10    |FDRE   |    25|
-|11    |LD     |     3|
-|12    |IBUF   |     2|
-|13    |OBUF   |    18|
+|11    |FDSE   |     1|
+|12    |LD     |     3|
+|13    |IBUF   |     6|
+|14    |OBUF   |    19|
+|15    |OBUFT  |     8|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+---------------+------+
 |      |Instance |Module         |Cells |
 +------+---------+---------------+------+
-|1     |top      |               |   108|
-|2     |  U1     |Decoder_OSU_SS |    51|
+|1     |top      |               |   123|
+|2     |  U1     |Decoder_OSU_SS |    52|
 |3     |  U2     |SegDisplay_SS  |    16|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 756.277 ; gain = 162.805
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 756.277 ; gain = 498.238
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 753.441 ; gain = 168.770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 753.441 ; gain = 494.746
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -354,11 +362,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 757.750 ; gain = 512.527
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:55 . Memory (MB): peak = 757.559 ; gain = 511.684
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/vivado/Projects/Security_System/Security_System.runs/synth_1/PmodKeypad_SS.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file PmodKeypad_SS_utilization_synth.rpt -pb PmodKeypad_SS_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 757.750 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 24 12:39:30 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 757.559 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 29 17:27:06 2018...

@@ -26,13 +26,16 @@ module Decoder_OSU_SS(
     input [3:0] Row,
     output reg [3:0] Col,
     output reg [3:0] DecodeOut,  
-    wire [15:0] passcode
+    output reg [15:0] passcode,
+    output reg LEDM
     );
     
-    reg [3:0] DecodeIn;
+    initial LEDM = 1'b0;
+//    passcode_shift v1(.passcode(passcode), .DecodeOut(DecodeOut));
     
     reg [19:0] divider;        
-    passcode_shift v1(.passcode(passcode), .DecodeOut(DecodeOut));   
+       
+       
     
     always @(posedge clk or posedge reset)
       begin
@@ -56,8 +59,10 @@ module Decoder_OSU_SS(
           begin
           
           if (Row == 4'b0111)
+          begin
+            LEDM <= 1'b1;
             DecodeOut <= 4'b0001;  //1
-           
+          end 
           else if (Row == 4'b1011) 
             DecodeOut <= 4'b0100;  //4
           else if (Row == 4'b1101) 
@@ -118,5 +123,23 @@ module Decoder_OSU_SS(
           DecodeOut <= 4'b1101;   //D 
       end
       
-      end
+    end
+    
+    always @(DecodeOut)
+    begin
+        //LEDM <= 1'b1;
+        passcode[15:12] <= passcode[11:8];
+        passcode[11:8] <= passcode[7:4];
+        passcode[7:4] <= passcode[3:0];
+        passcode[3:0] <= DecodeOut[3:0];
+        
+        //ENABLE <= {ENABLE[3:1], ENABLE[4]};
+        //passcode <= {passcode[11:8], passcode[7:4], passcode[3:0], DecodeOut[3:0]}
+        
+        if(DecodeOut[3:0] == 4'b0001)
+        begin
+         //   LEDM <= 1'b1;
+        end
+    end
+    
 endmodule

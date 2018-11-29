@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Nov 24 12:40:18 2018
+| Date         : Thu Nov 29 17:28:14 2018
 | Host         : C-1062E59EF5CD running 64-bit major release  (build 9200)
 | Command      : report_drc -file PmodKeypad_SS_drc_opted.rpt -pb PmodKeypad_SS_drc_opted.pb -rpx PmodKeypad_SS_drc_opted.rpx
 | Design       : PmodKeypad_SS
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 5
+             Violations found: 9
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| RPBF-3   | Warning  | IO port buffering is incomplete                     | 4          |
+| RPBF-3   | Warning  | IO port buffering is incomplete                     | 8          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -65,6 +65,26 @@ Related violations: <none>
 RPBF-3#4 Warning
 IO port buffering is incomplete  
 Device port JA[3] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#5 Warning
+IO port buffering is incomplete  
+Device port JA[4] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#6 Warning
+IO port buffering is incomplete  
+Device port JA[5] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#7 Warning
+IO port buffering is incomplete  
+Device port JA[6] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#8 Warning
+IO port buffering is incomplete  
+Device port JA[7] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 

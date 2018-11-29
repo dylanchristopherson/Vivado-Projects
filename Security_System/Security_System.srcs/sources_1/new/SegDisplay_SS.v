@@ -7,7 +7,8 @@ module SegDisplay_SS(
     output reg [6:0] SEGMENT,
     output [15:0] passcode,
     output reg off_or_on,
-    output reg LED
+    output reg LED,
+    output reg [8:0] LEDS
     );
     
     initial ENABLE <= 4'b1110;
@@ -21,8 +22,19 @@ module SegDisplay_SS(
     always @(passcode)
     begin
         LED <= 1'b1;
+//        LEDS[8] <= passcode[7];
+        LEDS[7] <= passcode[8];
+        LEDS[6] <= passcode[9];
+        LEDS[5] <= passcode[10];
+        LEDS[4] <= passcode[11];
+        LEDS[3] <= passcode[12];
+        LEDS[2] <= passcode[13];
+        LEDS[1] <= passcode[14];
+        LEDS[0] <= passcode[15];
+
+        
 //        if (passcode == 16'b00010001000100010001 )      //1111
-        if (passcode[15:12] == 4'h1)                //If there is a one, this one thing should turn on. Perhaps my check is n't working right. 
+        if (passcode[15:12] == 4'b0001)                //If there is a one, this one thing should turn on. Perhaps my check is n't working right. 
             off_or_on <= 1'b1;    
     end
     
