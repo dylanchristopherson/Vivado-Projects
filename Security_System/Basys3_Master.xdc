@@ -9,8 +9,8 @@ set_property PACKAGE_PIN W5 [get_ports clk]
 	#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports CLK100MHZ]
  
 # Switches
-#set_property PACKAGE_PIN V17 [get_ports { switch }]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports { switch }]
+#set_property PACKAGE_PIN V17 [get_ports { breakkk }]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports { breakkk }]
 #set_property PACKAGE_PIN V16 [get_ports { b }]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports { b }]
 #set_property PACKAGE_PIN W16 [get_ports {sw[2]}]					
@@ -112,8 +112,8 @@ set_property PACKAGE_PIN W4 [get_ports {ENABLE[4]}]
 set_property PACKAGE_PIN U18 [get_ports reset]						
 	set_property IOSTANDARD LVCMOS33 [get_ports reset]
 ##btnUP
-#set_property PACKAGE_PIN T18 [get_ports up]						
-#	set_property IOSTANDARD LVCMOS33 [get_ports up]
+#set_property PACKAGE_PIN T18 [get_ports breakkk]						
+#	set_property IOSTANDARD LVCMOS33 [get_ports breakkk]
 ##btnL
 #set_property PACKAGE_PIN W19 [get_ports left]						
 #	set_property IOSTANDARD LVCMOS33 [get_ports left]
@@ -156,8 +156,8 @@ set_property PACKAGE_PIN G3 [get_ports {JA[7]}]
 
 ##Pmod Header JB
 ##Sch name = JB1
-#set_property PACKAGE_PIN A14 [get_ports {JB[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[0]}]
+set_property PACKAGE_PIN A14 [get_ports breakkk]					
+	set_property IOSTANDARD LVCMOS33 [get_ports breakkk]
 ##Sch name = JB2
 #set_property PACKAGE_PIN A16 [get_ports {JB[1]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[1]}]

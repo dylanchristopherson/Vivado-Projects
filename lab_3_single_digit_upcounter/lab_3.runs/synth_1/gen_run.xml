@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1542166893">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543952217">
   <File Type="PA-TCL" Name="double_digit_counter.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="double_digit_counter_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="double_digit_counter_reports.tcl"/>

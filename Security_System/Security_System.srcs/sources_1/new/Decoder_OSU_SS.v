@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/09/2018 03:02:21 PM
-// Design Name: 
-// Module Name: Decoder_OSU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module Decoder_OSU_SS(
@@ -27,16 +8,18 @@ module Decoder_OSU_SS(
     output reg [3:0] Col,
     output reg [3:0] DecodeOut,  
     output reg [15:0] passcode,
-    output reg LEDM
+    output reg LEDM,
+    output reg off_or_on
+    
     );
     
     initial LEDM = 1'b0;
+    initial passcode = 16'b0000000000000000;
+    reg [5:0] pass =  16'b0001000100010001;
 //    passcode_shift v1(.passcode(passcode), .DecodeOut(DecodeOut));
     
-    reg [19:0] divider;        
+    reg [19:0] divider;     
        
-       
-    
     always @(posedge clk or posedge reset)
       begin
         if (reset)
@@ -60,15 +43,25 @@ module Decoder_OSU_SS(
           
           if (Row == 4'b0111)
           begin
-            LEDM <= 1'b1;
+            //LEDM <= 1'b1;
             DecodeOut <= 4'b0001;  //1
+            passcode <= {passcode[11:0], 4'b0001};
           end 
-          else if (Row == 4'b1011) 
+          else if (Row == 4'b1011)
+          begin 
             DecodeOut <= 4'b0100;  //4
-          else if (Row == 4'b1101) 
+            passcode <= {passcode[11:0], 4'b0100};
+          end
+          else if (Row == 4'b1101)
+          begin 
             DecodeOut <= 4'b0111;  //7
+            passcode <= {passcode[11:0], 4'b0111};
+          end
           else if (Row <= 4'b1110)
+          begin
             DecodeOut <= 4'b0000;   //0
+            passcode <= {passcode[11:0], 4'b0000};
+          end
             
           end
 //////////////////////////////////////////////////////////////         
@@ -79,14 +72,25 @@ module Decoder_OSU_SS(
         begin
         
         if (Row == 4'b0111)
+        begin
           DecodeOut <= 4'b0010; //2
-         
+          passcode <= {passcode[11:0], 4'b0010};
+        end
         else if (Row == 4'b1011)
+        begin
           DecodeOut <= 4'b0101; //5
+          passcode <= {passcode[11:0], 4'b1011};
+        end
         else if (Row == 4'b1101)
+        begin
           DecodeOut <= 4'b1000;  //8
+          passcode <= {passcode[11:0], 4'b1000};
+        end
         else if(Row == 4'b1110)
+        begin
           DecodeOut <= 4'b1111;  //F
+          passcode <= {passcode[11:0], 4'b1111};
+        end
         end
 ///////////////////////////////////////////////////////////////
       else if (divider == 20'b01001001001111100000)
@@ -96,14 +100,25 @@ module Decoder_OSU_SS(
         begin
         
         if (Row == 4'b0111)
+        begin  
           DecodeOut <= 4'b0011; //3
-         
+          passcode <= {passcode[11:0], 4'b0011};
+        end 
         else if (Row == 4'b1011)
+        begin
           DecodeOut <= 4'b0110; //6
+          passcode <= {passcode[11:0], 4'b0110};
+        end
         else if (Row == 4'b1101)
+        begin  
           DecodeOut <= 4'b1001; //9
+          passcode <= {passcode[11:0], 4'b1001};
+        end
         else if (Row == 4'b1110)
+        begin
           DecodeOut <= 4'b1110;  //E
+          passcode <= {passcode[11:0], 4'b1110};
+        end
         end
 ////////////////////////////////////////////////////////////////      
       else if (divider == 20'b01100001101010000000)
@@ -113,33 +128,49 @@ module Decoder_OSU_SS(
         begin
         
         if (Row == 4'b0111)
+        begin
           DecodeOut <= 4'b1010;  //A
-         
+          passcode <= {passcode[11:0], 4'b1000};
+        end
         else if (Row == 4'b1011)
+        begin
           DecodeOut <= 4'b1011;  //B
+          passcode <= {passcode[11:0], 4'b1011};
+        end
         else if (Row == 4'b1101)
+        begin
           DecodeOut <= 4'b1100;  //C
+          passcode <= {passcode[11:0], 4'b1100};
+        end
         else if (Row == 4'b1110)
+        begin
           DecodeOut <= 4'b1101;   //D 
+          passcode <= {passcode[11:0], 4'b1101};
+        end
       end
       
     end
-    
+////////////////////////////////////////////////////////    
     always @(DecodeOut)
     begin
         //LEDM <= 1'b1;
-        passcode[15:12] <= passcode[11:8];
-        passcode[11:8] <= passcode[7:4];
-        passcode[7:4] <= passcode[3:0];
-        passcode[3:0] <= DecodeOut[3:0];
+//        passcode[15:12] <= passcode[11:8];
+//        passcode[11:8] <= passcode[7:4];
+//        passcode[7:4] <= passcode[3:0];
+//        passcode[3:0] <= DecodeOut[3:0];
         
-        //ENABLE <= {ENABLE[3:1], ENABLE[4]};
-        //passcode <= {passcode[11:8], passcode[7:4], passcode[3:0], DecodeOut[3:0]}
-        
-        if(DecodeOut[3:0] == 4'b0001)
+//        //ENABLE <= {ENABLE[3:1], ENABLE[4]};
+//        passcode <= {passcode[11:8], passcode[7:4], passcode[3:0], DecodeOut[3:0]};
+//        passcode <= {passcode, 4'b0000};
+                
+        if(passcode == pass)
         begin
-         //   LEDM <= 1'b1;
+            if (off_or_on == 1'b0)
+                off_or_on <= 1'b1;
+            else
+                off_or_on <= 1'b0;
         end
+        
     end
     
 endmodule

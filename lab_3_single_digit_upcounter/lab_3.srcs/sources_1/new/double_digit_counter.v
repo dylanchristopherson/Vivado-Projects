@@ -24,7 +24,7 @@ module double_digit_counter(
     input clk,
     input reset,
     output wire pointer,
-    output wire [4:1] ENABLE,
+    output wire [3:0] ENABLE,
     output reg [6:0] SEGMENT
     );
     

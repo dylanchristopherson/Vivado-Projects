@@ -19,8 +19,6 @@ set_property src_info {type:XDC file:1 line:97 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN V7 [get_ports pointer]
 set_property src_info {type:XDC file:1 line:100 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U2 [get_ports {ENABLE[0]}]
-set_property src_info {type:XDC file:1 line:101 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCMOS33 [get_ports {ENABLE[0]}]
 set_property src_info {type:XDC file:1 line:102 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U4 [get_ports {ENABLE[1]}]
 set_property src_info {type:XDC file:1 line:104 export:INPUT save:INPUT read:READ} [current_design]
