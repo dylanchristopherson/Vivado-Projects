@@ -5,40 +5,24 @@ module Decoder_OSU_V2(
   input reset,
   input [3:0] Row,
   output reg [3:0] Col,
-  
   output reg off_or_on
-//  output reg [8:0] LEDS
-  
-//  output reg [15:0] DecodeOut,
-//  output reg [15:0] state_led,
-//  output reg [3:0] pass_signal,
-//  output reg [2:0]  press_count_out
-//  output reg [15:0] display_out
-//  input lock_button
 ); 
 
 // STATE 0: HANDLES INPUT FROM KEYPAD AND ALSO APPENDS NUMBER TO pass_buffer
-// STATE 1:
-// STATE 2 Checks Password	: Checks password
-// STATE 3 Unlocks Motor    : Switches on or off
-// STATE 4 Locks Motor
+// STATE 1: Checks if 4 digits have been entered. If they have, it goes to the next state
+// STATE 2: Checks Password	: Checks password
+// STATE 3: Switches on or off
   
   reg [15:0] DecodeOut;
-  reg [15:0] state_led;
-  reg [3:0] pass_signal;
   reg [2:0] press_count_out;
   reg [19:0] divider;
-  reg [15:0] pass = 16'b0001000100010001; //hardcoded password
-  
-  /*Password buffer*/
-  reg [15:0] pass_buffer;
-  
+  reg [15:0] pass = 16'b0001000100010001; // Hardcoded password        Password: 1111 
+  reg [15:0] pass_buffer;           // Password buffer
   reg [2:0]  press_count;
-  reg [2:0]  state = 3'b000;
+  reg [2:0]  state = 3'b000;        //Current State
   reg [3:0]  decode_buffer;
   reg [31:0] delay_clk;
-  //reg [2:0]  flash_count;
-  
+    
   always @(posedge reset or posedge clk)
     begin
       if(reset)
@@ -53,15 +37,9 @@ module Decoder_OSU_V2(
     begin
       case(state)
       
-      
-      
         //HANDLES INPUT FROM KEYPAD AND ALSO APPENDS NUMBER TO pass_buffer
         3'b000:
           begin
-//          LEDS[0] <= 1'b1;
-//          LEDS[1] <= 1'b0;
-//          LEDS[2] <= 1'b0;
-//          LEDS[3] <= 1'b0;
             
             if(divider ==  20'b00011000011010100000) // 11000011010100000 1ms delay =100000
               Col <= 4'b0111;
@@ -75,23 +53,23 @@ module Decoder_OSU_V2(
 
             else if(Row == 4'b1011)
                 begin
-                        decode_buffer = 4'b0100;  //4
-                        pass_buffer <= {pass_buffer, 4'b0100};
-                        state = 3'b001;
+                    decode_buffer = 4'b0100;  //4
+                    pass_buffer <= {pass_buffer, 4'b0100};
+                    state = 3'b001;
                 end  
                 
             else if(Row == 4'b1101)
             begin
-                          decode_buffer = 4'b0111;//7  
-                          pass_buffer <= {pass_buffer, 4'b0111};
-                          state = 3'b001;
+              decode_buffer = 4'b0111;//7  
+              pass_buffer <= {pass_buffer, 4'b0111};
+              state = 3'b001;
             end  
             
             else if(Row == 4'b1110) 
             begin
-                          decode_buffer = 4'b0000;  //0
-                          pass_buffer <= {pass_buffer, 4'b0000};
-                          state = 3'b001;
+              decode_buffer = 4'b0000;  //0
+              pass_buffer <= {pass_buffer, 4'b0000};
+              state = 3'b001;
             end
 
             if(divider ==  20'b00110000110101000000) //=200000
@@ -99,23 +77,23 @@ module Decoder_OSU_V2(
             else if(divider == 20'b00110000110101001000) //=200008
               begin 
                 if (Row == 4'b0111)
-                  begin
-                              decode_buffer = 4'b0010;  //2
-                              pass_buffer <= {pass_buffer, 4'b0010};
-                              state = 3'b001;
-                            end //2
+                    begin
+                        decode_buffer = 4'b0010;  //2
+                        pass_buffer <= {pass_buffer, 4'b0010};
+                        state = 3'b001;
+                    end //2
                 else if(Row == 4'b1011)  
-                  begin
-                              decode_buffer = 4'b0101;  //5
-                              pass_buffer <= {pass_buffer, 4'b0101};
-                              state = 3'b001;
-                            end //5
+                    begin
+                        decode_buffer = 4'b0101;  //5
+                        pass_buffer <= {pass_buffer, 4'b0101};
+                        state = 3'b001;
+                    end
                 else if(Row == 4'b1101)
-                  begin
-                              decode_buffer = 4'b1000;  //8
-                              pass_buffer <= {pass_buffer, 4'b1000};
-                              state = 3'b001;
-                            end
+                    begin
+                        decode_buffer = 4'b1000;  //8
+                        pass_buffer <= {pass_buffer, 4'b1000};
+                        state = 3'b001;
+                    end
                 else if(Row == 4'b1110)
                   DecodeOut <= 4'b1010; //f
               end
@@ -158,29 +136,20 @@ module Decoder_OSU_V2(
                   DecodeOut <= 4'b1010;  //c
                 else if(Row == 4'b1110)      
                   DecodeOut <= 4'b1010;  //d
-              end  
-			
-          
+              end  			 
           end
-          
-       
+         
+        // Checks if 4 digits have been entered. If they have, it goes to the next state
         3'b001:
-          begin
-          
-//          LEDS[0] <= 1'b0;
-//          LEDS[1] <= 1'b1;
-//          LEDS[2] <= 1'b0;
-//          LEDS[3] <= 1'b0;
-          
+          begin          
 		      if(delay_clk[31:0] == 32'd30000000)
 			  begin
-			    state_led <= 16'b0000000000000011;
-		//	    display_out <= pass_buffer;
+			 
 				DecodeOut <= decode_buffer;
 				delay_clk <= 32'd0;
 				press_count = press_count + 1'b1;
 				press_count_out <= press_count;
-				if(press_count[2:0] == 3'd4)
+		  if(press_count[2:0] == 3'd4)
           begin
             press_count <= 3'd0;
             state <= 3'b010;
@@ -196,59 +165,15 @@ module Decoder_OSU_V2(
 		//STATE 2 Checks Password	  
 		3'b010:
             begin
-            
-//            LEDS[0] <= 1'b0;
-//            LEDS[1] <= 1'b0;
-//            LEDS[2] <= 1'b1;
-//            LEDS[3] <= 1'b0;
-                /*if passward entered matches hardcoded password
-                    go to the next state
-                */
-                
-                if(pass_buffer == pass)
-                begin
-                    state <= 3'b011;
-                end
-                
-                /*
-                Wrong passcode entered
-                goes back to state 0
-                */
-                else
-                    state <= 3'b000;
-                    state_led <= 16'b0000000000000000;
-            
+                state <= (pass_buffer == pass)? 3'b011: 4'b000;
             end
-            
-            
-//////// Use these states for on_or_off to control seven segment display ////////////            
-            
+             
           //STATE 3 Locks or Unlocks Security System
-          3'b011: 
-          begin
-//          LEDS[0] <= 1'b0;
-//          LEDS[1] <= 1'b0;
-//          LEDS[2] <= 1'b0;
-//          LEDS[3] <= 1'b1;
-            state_led <= 16'b1111111111111111;
-            pass_signal <= 4'b0001;
-            
-            if (off_or_on == 1'b0)   //Turns on security system
-                off_or_on <= 1'b1;         
-            else                     //Turns off security system
-                off_or_on <= 1'b0;
-                
-            state <= 3'b000;         //Resets back to the first state
-          end
-          
-//          //STATE 4 Locks Motor
-//          3'b100:
-//          begin
-//            state_led <= 16'b0000000000000011;
-//            pass_signal <= 4'b0010;
-//            state <= 3'b000;
-//          end
-            
+        3'b011: 
+            begin
+                off_or_on <= (off_or_on == 1'b0)? 1'b1: 1'b0;       
+                state <= 3'b000;         //Resets back to the first state    
+            end
       endcase
     end
 endmodule

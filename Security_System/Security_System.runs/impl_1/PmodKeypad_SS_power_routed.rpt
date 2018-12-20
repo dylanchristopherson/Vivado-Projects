@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Dec  6 16:28:29 2018
+| Date             : Wed Dec 12 15:44:08 2018
 | Host             : C-1062E59EF5CD running 64-bit major release  (build 9200)
 | Command          : report_power -file PmodKeypad_SS_power_routed.rpt -pb PmodKeypad_SS_power_summary_routed.pb -rpx PmodKeypad_SS_power_routed.rpx
 | Design           : PmodKeypad_SS
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 10.514       |
+| Total On-Chip Power (W)  | 9.343        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.366       |
-| Device Static (W)        | 0.148        |
+| Dynamic (W)              | 9.213        |
+| Device Static (W)        | 0.130        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 32.4         |
-| Junction Temperature (C) | 77.6         |
+| Max Ambient (C)          | 38.3         |
+| Junction Temperature (C) | 71.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.378 |      292 |       --- |             --- |
-|   LUT as Logic |     0.296 |      105 |     20800 |            0.50 |
-|   CARRY4       |     0.043 |       21 |      8150 |            0.26 |
-|   Register     |     0.033 |      137 |     41600 |            0.33 |
+| Slice Logic    |     0.357 |      272 |       --- |             --- |
+|   LUT as Logic |     0.291 |       99 |     20800 |            0.48 |
+|   CARRY4       |     0.033 |       16 |      8150 |            0.20 |
+|   Register     |     0.027 |      123 |     41600 |            0.30 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.462 |      249 |       --- |             --- |
-| I/O            |     9.526 |       34 |       106 |           32.08 |
-| Static Power   |     0.148 |          |           |                 |
-| Total          |    10.514 |          |           |                 |
+|   Others       |     0.000 |        7 |       --- |             --- |
+| Signals        |     0.357 |      227 |       --- |             --- |
+| I/O            |     8.498 |       25 |       106 |           23.58 |
+| Static Power   |     0.130 |          |           |                 |
+| Total          |     9.343 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.936 |       0.864 |      0.072 |
-| Vccaux    |       1.800 |     0.368 |       0.348 |      0.020 |
-| Vcco33    |       3.300 |     2.690 |       2.689 |      0.001 |
+| Vccint    |       1.000 |     0.792 |       0.735 |      0.058 |
+| Vccaux    |       1.800 |     0.329 |       0.311 |      0.018 |
+| Vcco33    |       3.300 |     2.401 |       2.400 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,10 +138,9 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| PmodKeypad_SS |    10.366 |
-|   V1          |     0.429 |
-|   V2          |     0.313 |
-|     T1        |     0.113 |
+| PmodKeypad_SS |     9.213 |
+|   V1          |     0.411 |
+|   V2          |     0.270 |
 +---------------+-----------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Dec  6 16:27:47 2018
+| Date         : Wed Dec 12 15:43:08 2018
 | Host         : C-1062E59EF5CD running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file PmodKeypad_SS_control_sets_placed.rpt
 | Design       : PmodKeypad_SS
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    11 |
-| Unused register locations in slices containing registers |    14 |
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    18 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,11 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      8 |            4 |
-|     14 |            2 |
-|    16+ |            5 |
+|      2 |            1 |
+|      8 |            6 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |            4 |
 +--------+--------------+
 
 
@@ -46,32 +48,34 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              80 |           12 |
-| No           | No                    | Yes                    |              40 |            5 |
+| No           | No                    | No                     |              36 |            7 |
+| No           | No                    | Yes                    |              48 |            6 |
 | No           | Yes                   | No                     |              20 |            3 |
-| Yes          | No                    | No                     |              30 |            5 |
-| Yes          | No                    | Yes                    |              16 |            4 |
-| Yes          | Yes                   | No                     |              88 |           12 |
+| Yes          | No                    | No                     |              38 |            6 |
+| Yes          | No                    | Yes                    |               8 |            1 |
+| Yes          | Yes                   | No                     |              96 |           12 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------+---------------------------------------+----------------------------+------------------+----------------+
-|          Clock Signal         |             Enable Signal             |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
-+-------------------------------+---------------------------------------+----------------------------+------------------+----------------+
-|  V2/T1/b_a_reg[3]             |                                       |                            |                1 |              8 |
-|  V2/DECODE_BCD_reg[3]_i_2_n_0 |                                       |                            |                1 |              8 |
-|  pointer_OBUF_BUFG            | V1/Col[3]_i_1_n_0                     |                            |                2 |              8 |
-|  pointer_OBUF_BUFG            | V1/state                              |                            |                2 |              8 |
-|  count_clk                    |                                       |                            |                2 |             14 |
-|  count_clk                    | V2/bcd[10]_i_1_n_0                    |                            |                1 |             14 |
-|  pointer_OBUF_BUFG            | V2/T1/FSM_onehot_state_reg[7]_i_1_n_0 | reset_IBUF                 |                4 |             16 |
-|  pointer_OBUF_BUFG            | V1/state                              | V1/pass_buffer[15]_i_1_n_0 |                3 |             24 |
-|  pointer_OBUF_BUFG            |                                       |                            |                8 |             50 |
-|  pointer_OBUF_BUFG            |                                       | reset_IBUF                 |                8 |             60 |
-|  pointer_OBUF_BUFG            | V1/delay_clk[31]_i_2_n_0              | V1/delay_clk[31]_i_1_n_0   |                9 |             64 |
-+-------------------------------+---------------------------------------+----------------------------+------------------+----------------+
++-------------------------------+--------------------------+----------------------------+------------------+----------------+
+|          Clock Signal         |       Enable Signal      |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++-------------------------------+--------------------------+----------------------------+------------------+----------------+
+| ~pointer_OBUF_BUFG            |                          |                            |                1 |              2 |
+|  V2/DECODE_BCD_reg[3]_i_2_n_0 |                          |                            |                1 |              8 |
+|  V2/broken                    |                          | reset_IBUF                 |                1 |              8 |
+|  V2/broken                    | V2/b_a[7]_i_1_n_0        | reset_IBUF                 |                1 |              8 |
+|  pointer_OBUF_BUFG            | V1/Col[3]_i_1_n_0        |                            |                1 |              8 |
+|  pointer_OBUF_BUFG            | V1/state                 |                            |                2 |              8 |
+| ~pointer_OBUF_BUFG            | V2/sel                   | V2/clear                   |                1 |              8 |
+|  pointer_OBUF_BUFG            |                          |                            |                3 |             12 |
+|  V2/count_clk                 |                          |                            |                2 |             14 |
+|  V2/count_clk                 | V2/bcd[15]_i_1_n_0       |                            |                3 |             22 |
+|  pointer_OBUF_BUFG            | V1/state                 | V1/pass_buffer[15]_i_1_n_0 |                2 |             24 |
+|  pointer_OBUF_BUFG            |                          | reset_IBUF                 |                8 |             60 |
+|  pointer_OBUF_BUFG            | V1/delay_clk[31]_i_2_n_0 | V1/delay_clk[31]_i_1_n_0   |                9 |             64 |
++-------------------------------+--------------------------+----------------------------+------------------+----------------+
 
 

@@ -32,7 +32,6 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/Decoder_OSU_V2.v
   D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/SegDisplay_SS.v
-  D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/db_fsm.v
   D:/vivado/Projects/Security_System/Security_System.srcs/sources_1/new/PmodKeypad_SS.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

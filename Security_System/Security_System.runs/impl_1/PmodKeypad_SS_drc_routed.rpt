@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Dec  6 16:28:26 2018
+| Date         : Wed Dec 12 15:44:04 2018
 | Host         : C-1062E59EF5CD running 64-bit major release  (build 9200)
 | Command      : report_drc -file PmodKeypad_SS_drc_routed.rpt -pb PmodKeypad_SS_drc_routed.pb -rpx PmodKeypad_SS_drc_routed.rpx
 | Design       : PmodKeypad_SS
@@ -24,15 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 13
-+-------------+----------+-------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                 | Violations |
-+-------------+----------+-------------------------------------------------------------+------------+
-| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 2          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-| RPBF-3      | Warning  | IO port buffering is incomplete                             | 9          |
-+-------------+----------+-------------------------------------------------------------+------------+
+             Violations found: 11
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| PDRC-153 | Warning  | Gated clock check                                   | 1          |
+| RPBF-3   | Warning  | IO port buffering is incomplete                     | 9          |
++----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -52,21 +51,6 @@ Related violations: <none>
 PDRC-153#1 Warning
 Gated clock check  
 Net V2/DECODE_BCD_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin V2/DECODE_BCD_reg[3]_i_2/O, cell V2/DECODE_BCD_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net V2/T1/b_a_reg[3] is a gated clock net sourced by a combinational pin V2/T1/b_a[3]_i_2/O, cell V2/T1/b_a[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT V2/T1/b_a[3]_i_2 is driving clock pin of 4 cells. This could lead to large hold time violations. First few involved cells are:
-    V2/b_a_reg[0] {FDRE}
-    V2/b_a_reg[1] {FDRE}
-    V2/b_a_reg[2] {FDRE}
-    V2/b_a_reg[3] {FDRE}
-
 Related violations: <none>
 
 RPBF-3#1 Warning
@@ -111,7 +95,7 @@ Related violations: <none>
 
 RPBF-3#9 Warning
 IO port buffering is incomplete  
-Device port breakkk expects both input and output buffering but the buffers are incomplete.
+Device port break expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 
